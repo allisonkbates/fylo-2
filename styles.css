@@ -1,0 +1,441 @@
+/* TO DOs 
+1. Fix input buttons mobile
+2. Fix footer on mobile
+3. Finish desktop version
+4. Box Shadow on buttons
+5. CTA on both mobile & desktop
+
+/* General Styles */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+:root {
+  --mobile: 375px
+  --desktop: 1440px;
+  --very-dark-blue: hsl(243, 87%, 12%);
+  --desaturated-blue: hsl(238, 22%, 44%);
+  --bright-blue: hsl(224, 93%, 58%);
+  --moderate-cyan: hsl(170, 45%, 43%);
+  --light-grayish-blue: hsl(240, 75%, 98%);
+  --light-gray: hsl(0, 0%, 75%);
+  --heading-font: 'Raleway', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+
+  /* Spacing & Fonts */ /* THIS DID NOT WORK LOL */
+  --xs: .65rem;
+  --sm: .75rem;
+  --md: 1rem; 
+  --lg: 1.5rem; 
+  --xl: 2rem; 
+  --xxl: 2.5rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: var(--body-font);
+	font-weight: 400;
+	color: var(--very-dark-blue);
+}
+
+nav, section, footer {
+  padding: 20px 40px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nav Section */
+
+nav li {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  color: var(--very-dark-blue );
+  margin-left: var(--md);  /*  spacing variable */
+  font-size: 12px;
+}
+
+.logo-sm {
+  height: 25px;
+}
+
+/* Intro Section */
+
+.illustration {
+  width: 100%;
+  height: auto;
+  margin: var(--xxl) 0rem var(--lg) 0rem; /*  spacing variable */
+}
+
+.intro-section__heading {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 22px; 
+}
+
+.intro-section__body {
+  text-align: center;
+  line-height: 1.5;
+  margin: var(--lg) var(--sm); /*  spacing variable */
+  font-size: 13px;
+}
+
+.input--lg {
+  width: 100%;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  border-radius: 2px;
+  border: 1px solid var(--very-dark-blue);
+}
+
+.input--lg::placeholder {
+  padding: var(--sm); /*  spacing variable - doesn't look quite right*/
+  color: var(--light-gray);
+  font-family: var(--heading-font);
+  font-size: 13px;
+}
+
+.button--lg {
+  width: 100%;
+  height: 40px;
+  margin-top: var(--md); /* could use a taddd more spacing */
+  background-color: var(--bright-blue);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  /* box-shadow: 2px 2px  -- ?? */ 
+}
+
+/* Supporting Section */
+
+.curved-image {
+  background: url('./images/bg-curve-mobile.svg') no-repeat center center;
+  height: 53px;
+	width: 100%;
+	margin-top: var(--xl); /*  spacing variable */
+}
+
+.supporting-section {
+	background-color: var(--light-grayish-blue);
+}
+
+.supporting-section__header {
+  font-family: var(--heading-font);
+  font-size: 16px;  
+  font-weight: 700;
+  text-align: center;
+}
+
+.supporting-section__body {
+	line-height: 1.5;
+  margin-bottom: 0rem;
+  font-size: 13px;
+}
+
+/* CTA */
+
+.cta {
+	margin: var(--xl) 5.5rem; /*  spacing variable */
+	display: flex;
+	flex-direction: column;
+}
+
+.cta__inline {
+ display: inline-flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.cta__body {
+	font-size: var(--sm); /*  spacing variable */
+	color: var(--moderate-cyan);
+	margin: var(--xxs); /*  spacing variable */
+}
+
+.cta__icon {
+	height: 16px;
+	width: 16px;
+}
+
+.cta__line {
+	width: 100%;
+	height: 1px;
+	background-color: var(--moderate-cyan);
+}
+
+/* Card */
+
+.card {
+	background-color: white;
+	border-radius: 6px;
+	margin: var(--xl) var(--md); /*  spacing variable */
+	padding: var(--md) var(--lg); /*  spacing variable */
+	display: flex;
+	flex-direction: column;
+}
+
+.card__copy {
+	font-size: 10px;
+	line-height: 1.75;
+	margin: var(--xs) 0; /*  spacing variable */
+}
+
+.card__quotes {
+	height: 13px;
+	width: 13px;
+}
+
+/* Avatar */ 
+
+.avatar {
+	display: inline-flex;
+	align-items: center;
+}
+
+.avatar__image {
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+}
+
+.avatar__label {
+	margin-left: var(--xs); /*  spacing variable */
+}
+
+.avatar__name {
+	font-size: 9px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.avatar__title {
+	font-family: var(--heading-font);
+	font-size: 6px;
+	margin: 0;
+}
+
+/* Lead Gen Section */
+
+.lead-gen-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--desaturated-blue);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.lead-gen-section__heading {
+  color: white;
+  font-family: var(--heading-font);
+  text-align: center;
+}
+
+.lead-gen-section__body {
+	color: white;
+	line-height: 1.5;
+	text-align: center;
+	margin-top: 0;
+  padding: 0rem var(--md); /*  spacing variable */
+  font-size: 13px;
+}
+
+.lead-gen-section__cta {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0px 32px;
+}
+
+/* Input */
+
+.input--md {
+	height: 30px;
+	border: none;
+	border-radius: 2px;
+	padding-left: var(--xs); /*  spacing variable */
+	margin: var(--sm) 0 0;	
+}
+
+.input--md::placeholder {
+	font-family: var(--body-font);
+  color: var(--light-gray);
+  font-weight: 400;
+	font-size: 10px;
+}
+
+.button--md {
+	height: 30px;
+  margin: var(--sm) 0;
+  padding: 0 30px;
+  background-color: var(--bright-blue);
+	color: white;
+	font-size: 10px;
+  border: none;
+  border-radius: 2px;
+  /* box-shadow: 2px 2px  -- ?? */ 
+}
+
+/* Footer */
+
+footer {
+	background-color: var(--very-dark-blue);
+	color: white;
+}
+
+.logo {
+	padding: var(--xl) 0; /*  spacing variable */
+}
+
+.list--vertical-icon {
+	flex-direction: column;
+	padding: 0;
+	margin-top: var(--md); /*  spacing variable */
+}
+
+.list__inline-icon {
+	display: inline-flex;
+	align-items: center;
+	margin: 0; /*  spacing variable */
+}
+
+.list__inline-text {
+	padding-left: var(--sm); /*  spacing variable */
+  margin: var(--xs); /*  spacing variable */
+  font-size: 15px;
+}
+
+.list--vertical {
+  flex-direction: column;
+	padding: 0;
+	margin-top: 32px;
+}
+
+.list--vertical li {
+	font-family: var(--body-font);
+	font-size: 15px;
+	margin-bottom: 16px;
+}
+
+.social-icons {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.social-circle {
+  margin: 10px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 1px solid white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media only screen and (min-width: 800px) {
+
+  nav, section, footer {
+    padding: 40px 80px;
+  }
+
+  .logo-sm {
+    height: 49px;
+  }
+
+  .illustration {
+    width: 50%;
+    height: 50%;
+  }
+
+  .intro-section, .supporting-section {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .intro-section__content {
+    padding-right: 150px;
+  }
+
+  .intro-section__heading, .supporting-section__header, .lead-gen-section__heading {
+    text-align: left;
+    font-size: 32px; /*  spacing variable */
+  }
+  
+  .intro-section__body {
+    margin: var(--lg) 0rem; /*  spacing variable */
+    text-align: left;
+    font-size: 15px; 
+  }
+
+  .input--lg {
+    width: 64%;
+  }
+
+  .button--lg {
+    width: 35%;
+  }
+
+  .curved-image {
+    background: url('./images/bg-curve-desktop.svg') no-repeat center center;
+  }
+
+  .supporting-section__body {
+    padding-right: 150px;
+    font-size: 15px;
+  }
+
+  .card {
+    margin: var(--xl) 0rem;
+    width: 360px;
+    padding: 32px;
+  }
+
+  .card__copy {
+    font-size: 14px;
+  }
+
+  .avatar__image {
+    height: 35px;
+    width: 35px;
+  }
+
+  .lead-gen-section {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .lead-gen-section__content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .lead-gen-section__body {
+    padding: 0;
+    text-align: left;
+    font-size: 14px;
+  }
+
+}
