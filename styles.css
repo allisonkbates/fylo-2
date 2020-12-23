@@ -40,6 +40,10 @@ html, body {
 	color: var(--very-dark-blue);
 }
 
+label {
+  display: none;
+}
+
 nav, section, footer {
   padding: 20px 40px;
 }
